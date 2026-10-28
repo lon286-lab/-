@@ -1,0 +1,6 @@
+{
+  "name": "QC 品質檢驗與異常預警管理系統",
+  "description": "預防漏檢、量測超規防錯、不合格品隔離、出貨放行管制、全流程批次追溯與 AI 輔助異常預警之製造品管系統。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
