@@ -1,0 +1,52 @@
+# QC 品質檢驗與異常預警管理系統 — GitHub Pages 自動部署
+# 每次推送到 main 分支自動建置並發佈到 GitHub Pages
+
+name: Deploy QC System to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch: # 允許在 Actions 頁面手動觸發
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout（取得程式碼）
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js（安裝 Node 22）
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies（安裝相依套件）
+        run: npm install --legacy-peer-deps
+
+      - name: Build for GitHub Pages（以相對路徑建置）
+        run: npx vite build --base=./
+
+      - name: Upload Pages artifact（上傳建置成果）
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages（發佈到 Pages）
+        id: deployment
+        uses: actions/deploy-pages@v4

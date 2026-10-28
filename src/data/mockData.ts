@@ -452,7 +452,7 @@ export const INITIAL_ANOMALIES: QualityAnomaly[] = [
     measuredValue: 'Pin 7 - Pin 8 連錫短路阻抗 0.2Ω',
     specLimit: '相鄰引腳絕緣阻抗 > 10MΩ',
     description: '迴焊爐後第 3 組 U4 主晶片出現錫橋連錫現象，經確認可能為鋼網印刷局部錫膏釋放過多所致。',
-    photoUrl: '/src/assets/images/qc_pcb_solder_defect_1793073345497.jpg',
+    photoUrl: 'src/assets/images/qc_pcb_solder_defect_1793073345497.jpg',
     reportedBy: '林品檢 (Inspector Lin)',
     reportedAt: '2026-10-26T20:28:00Z',
     isQuarantined: true,
@@ -474,7 +474,7 @@ export const INITIAL_ANOMALIES: QualityAnomaly[] = [
     measuredValue: '滾道外緣可見明顯微裂刮痕長度 3.8mm，凹痕深度 0.12mm',
     specLimit: '零缺陷 (Zero Scratch/Dent allowed)',
     description: 'CNC 複合加工下料導軌金屬毛刺碰傷零件滾道外壁，零件外觀不合格。',
-    photoUrl: '/src/assets/images/qc_bearing_defect_1793073344632.jpg',
+    photoUrl: 'src/assets/images/qc_bearing_defect_1793073344632.jpg',
     reportedBy: '林品檢 (Inspector Lin)',
     reportedAt: '2026-10-26T20:35:00Z',
     isQuarantined: true,
@@ -664,7 +664,7 @@ export const INITIAL_SPC_POINTS: SPCPoint[] = [
 export const INITIAL_VISUAL_SAMPLES: VisualDefectDetection[] = [
   {
     id: 'vis_sample_bearing',
-    imagePath: '/src/assets/images/qc_bearing_defect_1793073344632.jpg',
+    imagePath: 'src/assets/images/qc_bearing_defect_1793073344632.jpg',
     sampleName: '樣品 A: 軸承外環表面刮痕與碰凹',
     detectedDefects: [
       {
@@ -686,7 +686,7 @@ export const INITIAL_VISUAL_SAMPLES: VisualDefectDetection[] = [
   },
   {
     id: 'vis_sample_casing',
-    imagePath: '/src/assets/images/qc_casing_crack_1793073345335.jpg',
+    imagePath: 'src/assets/images/qc_casing_crack_1793073345335.jpg',
     sampleName: '樣品 B: 醫療級 PEEK 注塑外殼應力微裂',
     detectedDefects: [
       {
@@ -701,7 +701,7 @@ export const INITIAL_VISUAL_SAMPLES: VisualDefectDetection[] = [
   },
   {
     id: 'vis_sample_pcb',
-    imagePath: '/src/assets/images/qc_pcb_solder_defect_1793073345497.jpg',
+    imagePath: 'src/assets/images/qc_pcb_solder_defect_1793073345497.jpg',
     sampleName: '樣品 C: SMT 晶片相鄰引腳錫橋短路',
     detectedDefects: [
       {

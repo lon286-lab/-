@@ -66,7 +66,7 @@ export const AnomalyModule: React.FC<AnomalyModuleProps> = ({
     prefillData ? `實測值 ${prefillData.measured} 超出標準範圍 ${prefillData.spec}。` : '機台下料導軌碰傷零件表面。'
   );
   const [newQuarantineLocation, setNewQuarantineLocation] = useState<string>('紅區隔離庫 B-04 (禁止移轉)');
-  const [newPhotoUrl, setNewPhotoUrl] = useState<string>('/src/assets/images/qc_bearing_defect_1793073344632.jpg');
+  const [newPhotoUrl, setNewPhotoUrl] = useState<string>('src/assets/images/qc_bearing_defect_1793073344632.jpg');
 
   // Disposition Modal (QC-205)
   const [isDispositioning, setIsDispositioning] = useState<boolean>(false);
@@ -680,13 +680,13 @@ export const AnomalyModule: React.FC<AnomalyModuleProps> = ({
                     onChange={(e) => setNewPhotoUrl(e.target.value)}
                     className="w-full px-2.5 py-1.5 border border-slate-300 rounded text-xs"
                   >
-                    <option value="/src/assets/images/qc_bearing_defect_1793073344632.jpg">
+                    <option value="src/assets/images/qc_bearing_defect_1793073344632.jpg">
                       航太軸承滾道刮傷與凹痕照片
                     </option>
-                    <option value="/src/assets/images/qc_casing_crack_1793073345335.jpg">
+                    <option value="src/assets/images/qc_casing_crack_1793073345335.jpg">
                       醫療 PEEK 注塑外殼應力裂痕照片
                     </option>
-                    <option value="/src/assets/images/qc_pcb_solder_defect_1793073345497.jpg">
+                    <option value="src/assets/images/qc_pcb_solder_defect_1793073345497.jpg">
                       SMT 電路板 IC 錫橋短路微觀照片
                     </option>
                   </select>
